@@ -1,0 +1,14 @@
+I have to go in detail, because it's the most delicious part of a project as a way of building service sommunication throught the message bus. :)
+
+
+I have a fairly recent project of mine doing automated staff ordering pizzas from my local restaurant. The UI from that restaurant was a bit tricky to see a lot of advertisments before making actual order. In addition, as a pizza lover, I wanted to decrease my spending with that. So I decided to create a flow to make orderings far more apporachable.
+
+
+In this project I use selenium-like project called taiko. Which is most suitable for UI testing and automation. This scrapper following certain fields and fill them by desire. Then, when communication with the backed was made - exact needed information is fall to the message bus system on Redis, via pub \ sub pattern. Both, front end and backend listen to the same channel upon communication. When certain part of a system recognizes its trigger, it uses operation by the given order. In other words, it's easy to scale the approach to carry out needs of a customer.
+
+
+I have a short video to prove how it works. (https://www.youtube.com/watch?v=8_-wekj8vBs)
+
+Notice, when system hangs for a reasonable time, it's actually waiting a response from an thirds party API registering one time usage phone number. After that registers it in a system to have a discount.
+
+This project isn't violating of a service rules.
